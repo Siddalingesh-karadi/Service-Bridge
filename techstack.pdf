@@ -1,0 +1,46 @@
+# Service Bridge – Technology Stack
+
+### Frontend
+- React.js – User interface
+- Vite – Frontend development and build tool
+- Bootstrap & CSS – Responsive UI design
+
+### Backend
+- Node.js – Server-side runtime
+- Express.js – Backend framework
+- REST API – Frontend and backend communication
+
+### Database
+- MongoDB Atlas – Cloud database
+- Mongoose – MongoDB object modeling
+
+### Authentication & Security
+- Firebase Authentication – Mobile number OTP verification
+- bcrypt – Password hashing
+- JSON Web Token (JWT) – Application authentication and session management
+- Firebase Admin SDK – Backend verification of Firebase ID tokens
+
+### Email Services
+- Nodemailer – Sending email OTPs
+- Gmail SMTP – Email delivery
+
+### Development & Testing
+- Git & GitHub – Version control and collaboration
+- VS Code – Code editor
+- Postman – API testing
+- npm – Package management
+
+### Deployment
+- Vercel – Frontend hosting
+- Render – Backend hosting
+
+### Architecture
+- MERN Stack
+- RESTful API architecture
+- Role-Based Access Control (RBAC)
+
+### User Roles
+- Customer
+- Service Professional
+- Employer
+- Admin
