@@ -1,0 +1,734 @@
+# PROJECT MASTER DOCUMENT
+
+# SERVICE BRIDGE
+
+### Household Service Marketplace & Skilled Employment Platform
+
+**Project Type:** Web Application
+**Project Purpose:** College Project / Hackathon
+**Development Approach:** Team-based development
+**Initial Launch Scope:** One city / local area
+**Product Vision:** Connect people who need household services with skilled professionals and connect skilled professionals with employment opportunities.
+
+---
+
+# 1. PROJECT OVERVIEW
+
+Service Bridge is a web-based platform designed to connect customers, skilled service professionals, and employers through a centralized digital marketplace.
+
+The platform addresses two major problems:
+
+1. People struggle to find reliable and suitable professionals for household services such as electrical repairs, plumbing, carpet cleaning, appliance repair, painting, and other household maintenance activities.
+2. Skilled workers often struggle to discover suitable employment opportunities related to their professional skills and experience.
+
+Service Bridge aims to solve both problems through a single platform.
+
+It will provide two primary services:
+
+**A. Household Service Marketplace**
+
+Customers can discover skilled professionals, view their profiles, submit service requests, and contact them to get household work completed.
+
+**B. Skilled Employment Platform**
+
+Employers can publish job opportunities related to different trades and professions. Skilled workers can browse relevant jobs, express interest or apply, and connect with employers.
+
+The platform will initially operate within one selected city or local area. Its design should allow expansion to additional locations in the future.
+
+IMPORTANT: Service Bridge is not intended to be merely a directory of service providers. It should support meaningful interactions between customers and professionals, as well as between employers and workers.
+
+---
+
+# 2. PROBLEM STATEMENT
+
+Finding trustworthy household service professionals is often difficult and time-consuming.
+
+Customers frequently depend on personal references, local contacts, or unorganized sources to find electricians, plumbers, cleaners, painters, and other skilled workers. This makes service discovery inconvenient and limits access to suitable professionals.
+
+At the same time, many skilled workers lack a centralized platform where they can showcase their abilities, receive service requests, and discover employment opportunities matching their skills.
+
+Employers also face difficulties reaching suitable skilled workers for their vacancies.
+
+There is a need for a centralized digital platform that bridges these gaps by connecting customers with service professionals and connecting skilled workers with employers.
+
+**Service Bridge aims to provide an organized, accessible, and reliable platform for household service discovery and skilled employment opportunities.**
+
+---
+
+# 3. PROJECT OBJECTIVES
+
+The major objectives are:
+
+1. Provide a centralized platform for discovering household service professionals.
+2. Allow customers to search for professionals based on service category and location.
+3. Enable professionals to create profiles and showcase their skills, experience, and services.
+4. Allow customers to submit service requests and communicate with professionals.
+5. Provide employers with the ability to publish job opportunities.
+6. Help skilled workers discover employment opportunities relevant to their professions.
+7. Provide an organized way for employers to connect with potential workers.
+8. Improve visibility and accessibility of local skilled professionals.
+9. Establish trust through appropriate account verification, moderation, and reporting mechanisms.
+10. Provide administrators with tools to manage users, listings, and platform activities.
+11. Build a secure, maintainable, and scalable foundation for future development.
+
+---
+
+# 4. TARGET USERS
+
+The system has four primary user roles.
+
+## 4.1 Customers
+
+Customers are individuals who need household services.
+
+They should be able to:
+
+- Register and log in.
+- Manage their profiles.
+- Browse household service categories.
+- Search for professionals.
+- Filter professionals by service category and location.
+- View professional profiles.
+- View skills, experience, service descriptions, and available contact options.
+- Submit household service requests.
+- Describe their requirements.
+- View their submitted requests and their statuses.
+- Contact professionals through the agreed communication mechanism.
+- Cancel their requests according to platform rules.
+- Report suspicious users or inappropriate content.
+- Provide feedback or reviews if the review functionality is included.
+
+## 4.2 Service Professionals
+
+Service professionals are skilled individuals who provide household services.
+
+Examples include:
+
+- Electricians
+- Plumbers
+- Carpenters
+- Painters
+- Carpet cleaners
+- Appliance repair technicians
+- AC technicians
+- Cleaning professionals
+- Other household service providers
+
+They should be able to:
+
+- Register and log in.
+- Create and manage professional profiles.
+- Add their skills and service categories.
+- Describe their experience.
+- Add their service locations.
+- Add appropriate profile images and supporting information.
+- Manage service requests received from customers.
+- Accept, reject, or respond to requests according to the agreed workflow.
+- View relevant job opportunities.
+- Connect with employers or express interest in jobs.
+- Manage account and contact preferences.
+
+A professional may also use the platform as a customer. The account model should support multiple permitted capabilities without requiring unnecessary duplicate accounts.
+
+## 4.3 Employers
+
+Employers are individuals, contractors, businesses, or organizations looking to hire skilled workers.
+
+They should be able to:
+
+- Register and log in.
+- Create and manage employer profiles.
+- Provide relevant business or organization information.
+- Publish job opportunities.
+- Add job titles and descriptions.
+- Specify required skills and qualifications.
+- Specify job locations.
+- Specify employment type.
+- Specify salary or compensation information where applicable.
+- Manage their own job listings.
+- Edit or close job postings.
+- View interested candidates or applicants according to the finalized hiring workflow.
+- Contact suitable workers.
+- Update hiring status where supported.
+
+## 4.4 Administrators
+
+Administrators are responsible for platform management and safety.
+
+They should be able to:
+
+- Access a protected administrative dashboard.
+- View and manage user accounts.
+- Manage service categories.
+- Review professional profiles and verification requests.
+- Manage job listings.
+- Review reported content and users.
+- Suspend or restrict accounts when justified.
+- Remove fraudulent or inappropriate listings.
+- Monitor service requests and job activity where necessary.
+- View relevant platform statistics.
+- Maintain records of important administrative actions.
+
+Administrative access must never be granted merely because a user changes a role field in their profile.
+
+---
+
+# 5. CORE MODULES
+
+The project is divided into the following major modules.
+
+## MODULE 1: USER AUTHENTICATION AND ACCOUNT MANAGEMENT
+
+Purpose: Provide secure account registration, login, profile management, and permission-based access.
+
+Expected functionality:
+
+- User registration.
+- Secure login and logout.
+- Password hashing.
+- Account recovery.
+- Profile management.
+- User role and permission management.
+- Session management.
+- Account deactivation.
+- Protection against unauthorized access.
+
+The system should support appropriate user capabilities for customers, professionals, and employers.
+
+Administrator permissions must be handled separately through controlled authorization.
+
+## MODULE 2: HOUSEHOLD SERVICE MARKETPLACE
+
+Purpose: Help customers discover and connect with suitable service professionals.
+
+### Service Categories
+
+The platform should support configurable categories such as:
+
+- Electrical Services
+- Plumbing Services
+- Carpentry Services
+- Painting Services
+- Carpet Cleaning
+- Home Cleaning
+- Appliance Repair
+- AC Repair and Maintenance
+- Pest Control
+- Other Household Services
+
+Administrators should be able to manage categories without requiring code changes.
+
+### Professional Profiles
+
+Each professional profile may contain:
+
+- Full name or professional display name.
+- Profile image.
+- Skills.
+- Service categories.
+- Experience.
+- Service description.
+- Service area.
+- Contact preferences.
+- Verification status.
+- Ratings and reviews, if enabled.
+- Other relevant professional information.
+
+### Search and Discovery
+
+Customers should be able to:
+
+- Search for professionals by service.
+- Filter by category.
+- Filter by locality or supported service area.
+- View matching professional profiles.
+- Access relevant service information.
+
+Search results should prioritize relevant professionals rather than displaying unrelated profiles.
+
+### Service Request Management
+
+Customers should be able to:
+
+1. Select a professional.
+2. Describe the required household work.
+3. Provide relevant location information.
+4. Submit a service request.
+5. View the request status.
+6. Contact the professional through the agreed communication mechanism.
+
+Professionals should be able to:
+
+1. View incoming service requests.
+2. Review customer requirements.
+3. Respond to requests.
+4. Accept or reject requests according to the finalized workflow.
+5. Update the request status where appropriate.
+
+Initial service request lifecycle proposal:
+
+- Pending
+- Accepted
+- Rejected
+- In Progress
+- Completed
+- Cancelled
+
+The exact transition rules must be defined before implementation.
+
+IMPORTANT: The initial product uses a request-and-contact model. Full appointment scheduling and automatic booking are not required in the first version.
+
+## MODULE 3: JOB OPPORTUNITY AND EMPLOYMENT MANAGEMENT
+
+Purpose: Connect skilled workers with employers.
+
+### Employer Job Posting
+
+Employers should be able to create job listings containing:
+
+- Job title.
+- Job description.
+- Required skills.
+- Required experience.
+- Job location.
+- Employment type.
+- Salary or compensation range, if applicable.
+- Number of vacancies, if applicable.
+- Contact or application instructions.
+- Posting date.
+- Application deadline, if applicable.
+- Job status.
+
+Example job opportunities:
+
+- Electrician required for residential projects.
+- Plumber required for a construction site.
+- Carpenter required for furniture work.
+- Painting workers required for building projects.
+- AC technicians required for maintenance work.
+
+### Job Discovery
+
+Workers should be able to:
+
+- Browse available jobs.
+- Search by job title.
+- Filter by trade or skills.
+- Filter by location.
+- View complete job details.
+- Identify active and closed listings.
+
+### Employer and Worker Interaction
+
+The intended workflow is employer-led hiring.
+
+Employers publish opportunities, and workers discover suitable opportunities.
+
+The exact interaction model must be finalized:
+
+Option A: Workers express interest and employers contact them.
+
+Option B: Workers submit formal applications, and employers manage applicants.
+
+Do not implement both workflows automatically without confirming the final requirement.
+
+## MODULE 4: ADMINISTRATION AND MODERATION
+
+Purpose: Maintain platform quality, security, and trust.
+
+Expected functionality:
+
+- Administrative dashboard.
+- User management.
+- Professional management.
+- Employer management.
+- Service category management.
+- Job listing moderation.
+- Report management.
+- Account suspension and restriction.
+- Verification management.
+- Basic activity statistics.
+- Administrative audit records.
+
+The administrator should have appropriate authority to handle suspicious accounts, fake job postings, and inappropriate content.
+
+All sensitive administrative operations must be authorized and auditable.
+
+## MODULE 5: NOTIFICATIONS
+
+Purpose: Keep relevant users informed about important activities.
+
+Potential notifications:
+
+- New service request.
+- Service request response.
+- Request status change.
+- New job listing matching relevant skills or location.
+- Job-related interest or application.
+- Employer response.
+- Account verification update.
+- Important administrative notices.
+
+The notification delivery mechanism is not finalized.
+
+Do not assume SMS, email, push notifications, or WhatsApp integration until approved.
+
+## MODULE 6: PAYMENT MODEL
+
+The initial version will use direct payments between customers and service professionals.
+
+Requirements:
+
+- Customers pay professionals directly.
+- The platform does not collect or hold customer payments.
+- No payment gateway is required in the MVP.
+- The platform should clearly communicate its direct-payment model.
+- The platform must not claim that a transaction has been paid unless there is a verified basis for that claim.
+
+Online payments, commissions, refunds, and professional payouts are future possibilities, not initial requirements.
+
+---
+
+# 6. IMPORTANT BUSINESS RULES
+
+1. Customers must only access their own private service requests.
+2. Professionals must only manage requests they are authorized to access.
+3. Employers must only modify their own job listings.
+4. Administrators must have separately controlled privileges.
+5. Closed or expired job listings must not appear as active opportunities.
+6. Suspended users must not be able to perform restricted operations.
+7. Professional verification status must accurately reflect the checks performed.
+8. A profile must not be described as verified merely because it has been created.
+9. Public professional profiles should not expose unnecessary personal information.
+10. Contact details should only be disclosed according to the approved privacy and consent rules.
+11. All user-submitted content must be validated.
+12. Service requests and job listings must have clear ownership and status rules.
+13. Users must have a way to report inappropriate or fraudulent content.
+14. Administrative actions affecting accounts and listings should be recorded.
+15. Service Bridge must not represent itself as guaranteeing the quality of every professional or employment opportunity.
+
+---
+
+# 7. NON-FUNCTIONAL REQUIREMENTS
+
+The application should follow professional software development standards.
+
+## Security
+
+- Secure password hashing.
+- Proper authentication and authorization.
+- Server-side permission enforcement.
+- Input validation and sanitization.
+- Protection against common web vulnerabilities.
+- Secure session and cookie configuration.
+- Rate limiting for sensitive endpoints.
+- Protection against unauthorized data access.
+- Secure handling of uploaded files.
+- No hardcoded credentials or exposed secrets.
+- Appropriate protection against cross-site scripting, SQL/NoSQL injection, CSRF where applicable, and other relevant attacks.
+
+## Performance
+
+- Efficient database queries.
+- Pagination for large listings.
+- Optimized search and filtering.
+- Proper indexing based on query patterns.
+- Optimized image handling.
+- Avoid unnecessary API calls.
+- Design for future growth without premature complexity.
+
+## Reliability
+
+- Proper error handling.
+- Clear validation messages.
+- Consistent data updates.
+- Prevention of duplicate submissions where appropriate.
+- Safe handling of failed operations.
+- Backup and recovery planning.
+
+## Usability
+
+- Responsive web design.
+- Mobile-first user experience.
+- Simple navigation.
+- Accessible forms and controls.
+- Clear loading, success, and error states.
+- Consistent interface design.
+
+## Maintainability
+
+- Clear separation of responsibilities.
+- Reusable components.
+- Consistent naming conventions.
+- Documented APIs and business rules.
+- Maintainable database design.
+- Appropriate testing.
+- Avoid unnecessary dependencies and duplicated code.
+
+## Privacy
+
+- Collect only necessary personal information.
+- Apply appropriate access restrictions.
+- Protect uploaded documents.
+- Avoid exposing exact residential addresses publicly.
+- Define retention and deletion rules for personal data.
+
+---
+
+# 8. MVP SCOPE
+
+The initial MVP should prioritize the following.
+
+### MUST HAVE
+
+1. User registration and login.
+2. User profiles and access control.
+3. Service category management.
+4. Professional profile creation.
+5. Professional search and filtering.
+6. Service request submission.
+7. Service request management.
+8. Employer profiles.
+9. Job creation and management.
+10. Job search and discovery.
+11. Agreed worker-employer interaction.
+12. Basic administrative dashboard.
+13. User reporting and content moderation.
+14. Basic verification status management.
+15. Secure and responsive user interface.
+
+### SHOULD HAVE
+
+1. Essential notifications.
+2. Professional verification workflow.
+3. Employer verification workflow.
+4. Reviews and ratings tied to genuine interactions.
+5. Administrative activity logs.
+6. Better search filters.
+7. User account recovery.
+
+### FUTURE ENHANCEMENTS
+
+These should not delay the initial MVP:
+
+1. Online payment gateway.
+2. Platform commissions.
+3. Live location tracking.
+4. Real-time chat.
+5. Appointment scheduling.
+6. Automated professional recommendations.
+7. Advanced job matching.
+8. Mobile applications.
+9. Multi-city and nationwide expansion.
+10. Advanced analytics and reporting.
+
+---
+
+# 9. INITIAL PROJECT CONSTRAINTS
+
+- This is a team-based college project / hackathon.
+- The first release targets one city or local area.
+- The application is a web application.
+- The product must be production-oriented in its security and engineering practices.
+- Development time and team capacity must be considered when prioritizing features.
+- The technology stack has NOT been finalized.
+- The database has NOT been finalized.
+- Hosting and deployment arrangements have NOT been finalized.
+- The exact launch city has NOT been confirmed.
+- The communication mechanism has NOT been finalized.
+- The detailed verification policy has NOT been finalized.
+
+Do not invent answers for these unknowns.
+
+---
+
+# 10. UNRESOLVED REQUIREMENTS
+
+Before architecture and implementation, the team must finalize:
+
+1. Exact launch city and supported localities.
+2. Whether customer-professional contact uses direct phone numbers, in-platform messaging, or request-based contact sharing.
+3. Whether workers formally apply for jobs or simply express interest and contact employers.
+4. The level of identity and professional verification required.
+5. Whether employer and professional capabilities can coexist in one account.
+6. Whether customer reviews and ratings are included in the first release.
+7. The notification channels required for the MVP.
+8. The precise service request and job status transition rules.
+9. The team's deadline, available developers, and division of responsibilities.
+
+Where decisions remain open, present reasonable alternatives with their trade-offs and ask for approval before treating one as final.
+
+---
+
+# 11. SUCCESS CRITERIA
+
+The initial release should demonstrate the following complete user journeys:
+
+### Customer journey
+
+A customer registers, searches for a plumber or electrician, views a professional profile, submits a service request, and contacts the professional.
+
+### Professional journey
+
+A professional registers, creates a profile, lists skills and services, receives service requests, and manages those requests.
+
+### Employer journey
+
+An employer registers, creates a job listing, manages the vacancy, and interacts with interested workers.
+
+### Worker employment journey
+
+A skilled worker discovers relevant employment opportunities and uses the approved mechanism to connect with an employer.
+
+### Administrator journey
+
+An administrator manages user accounts, reviews reports, moderates job listings, and handles verification workflows.
+
+All critical journeys must be tested with appropriate authorization and error-handling checks.
+
+---
+
+# 12. DEVELOPMENT INSTRUCTIONS FOR CLAUDE
+
+You are acting as the senior software engineer, solution architect, technical lead, and project manager for Service Bridge.
+
+Your responsibility is to guide the development of a secure, maintainable, reliable, and professional application.
+
+Follow these instructions strictly:
+
+## A. Understand before implementing
+
+- Study this entire document.
+- Understand the two main business workflows.
+- Identify confirmed requirements and unresolved decisions.
+- Do not invent functionality.
+- Ask questions when a missing requirement materially affects architecture or implementation.
+- Do not start coding before the relevant requirements are understood.
+
+## B. Architecture decisions
+
+Before selecting technologies:
+
+- Understand the team's skills.
+- Understand the project deadline.
+- Evaluate architectural alternatives.
+- Explain the advantages and disadvantages of significant decisions.
+- Avoid unnecessary microservices or overengineering.
+- Prefer an architecture that the team can implement, test, and maintain.
+- Ensure the architecture supports future expansion.
+
+## C. Database design
+
+Before implementation:
+
+- Identify the main entities.
+- Define their relationships.
+- Identify ownership rules.
+- Define constraints and indexes.
+- Consider privacy and access-control requirements.
+- Avoid unnecessary duplication.
+- Explain important database design decisions.
+
+## D. Security
+
+Security is not an optional feature.
+
+Review authentication, authorization, input validation, file uploads, session management, data exposure, and administrative access.
+
+Never rely exclusively on frontend validation or hidden UI elements for security.
+
+## E. Code quality
+
+- Use readable and maintainable code.
+- Follow consistent naming conventions.
+- Keep responsibilities separated.
+- Reuse components and services appropriately.
+- Avoid unnecessary dependencies.
+- Avoid duplicated business logic.
+- Preserve existing code unless a change is necessary.
+- Never overwrite existing functionality without understanding its purpose.
+
+## F. Implementation instructions
+
+Whenever providing code:
+
+1. Specify the exact file path.
+2. Explain whether the file must be created or modified.
+3. Provide complete compatible code when appropriate.
+4. Explain required environment variables.
+5. Provide installation and execution commands.
+6. Explain how the code integrates with existing modules.
+7. Identify potential breaking changes.
+8. Provide testing steps and expected results.
+
+## G. Testing
+
+Create a testing strategy covering:
+
+- Unit testing.
+- API testing.
+- Integration testing.
+- Authentication testing.
+- Authorization testing.
+- Input validation.
+- Database operations.
+- End-to-end user workflows.
+- Security testing.
+- Error handling.
+
+Never claim that functionality has been tested unless it has actually been executed and verified.
+
+## H. Project management
+
+Work in clearly defined milestones.
+
+For every milestone:
+
+- Define the objective.
+- List tasks.
+- Identify dependencies.
+- Define completion criteria.
+- Identify potential risks.
+- Track decisions and unresolved issues.
+
+Do not jump between modules without considering dependencies.
+
+## I. Communication style
+
+The project team consists of student developers.
+
+Explain technical concepts in simple English without sacrificing technical correctness.
+
+Do not blindly agree with proposed solutions. Identify incorrect assumptions and explain better alternatives.
+
+Prioritize:
+
+- Correctness over speed.
+- Security over convenience.
+- Maintainability over shortcuts.
+- Requirements over assumptions.
+- Simplicity over unnecessary complexity.
+
+---
+
+# 13. FIRST TASK — REQUIREMENTS REVIEW
+
+IMPORTANT: Do not start implementation immediately.
+
+Your first task is to:
+
+1. Read and analyze the entire Service Bridge project document.
+2. Summarize your understanding of the project.
+3. Identify the two distinct business workflows.
+4. Identify all user roles and their permissions.
+5. Identify missing or ambiguous requirements.
+6. Identify technical, operational, privacy, and security risks.
+7. Separate confirmed requirements from proposed requirements.
+8. Recommend the most important decisions that must be finalized before architecture design.
+9. Prepare a prioritized development roadmap at a high level.
+
+Ask only essential clarification questions.
+
+Do not select the final technology stack, generate database schemas, create project files, or start coding until the requirements and team constraints are sufficiently understood and approved.
+
+**Your goal is to help us build Service Bridge as a coherent, secure, maintainable, and genuinely useful software product rather than simply generating code for a collection of features.**
