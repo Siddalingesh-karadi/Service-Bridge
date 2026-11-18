@@ -1,0 +1,11 @@
+.badge{display:inline-block;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:700;background:#EAF6EE;color:#1F7A45}
+.badge.pending,.badge.under_review{background:#FFF4D6;color:#7A5200}
+.badge.rejected,.badge.suspended{background:#FDE7E4;color:#B42318}
+.checks{display:flex;flex-wrap:wrap;gap:12px}
+.checks label{flex-direction:row;align-items:center;gap:6px;font-weight:500}
+.checks input{width:auto}
+.split{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:16px}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+.item{text-align:left;background:#fff;border:1px solid var(--bd);border-radius:12px;padding:12px;font:inherit;cursor:pointer}
+.item.on{border-color:var(--g);background:var(--gl)}
+.ok{color:#1F7A45;margin:0;font-size:14px}
